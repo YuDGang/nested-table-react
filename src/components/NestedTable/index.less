@@ -1,0 +1,80 @@
+// 淡出动画
+.fadeOut(){
+	animation:fadeOut 0.3s linear;
+	@keyframes fadeOut {
+		0% {
+			opacity:0.3;
+		}
+		100%{
+			opacity:1;
+		}
+	}
+}
+
+.overflowHidden(){
+	display:inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.tntx-table-expand-fixed{
+	.ant-table-tbody{
+		tr{
+			p{
+				.overflowHidden();
+			}
+			td:first-child{
+				.ant-table-row-expand-icon{
+					height: 14px;
+					width: 14px;
+					line-height: 9.5px;
+				}
+				.ant-table-row-collapsed{
+					// background: #86d16b;
+					// border: 1px solid #86d16b;
+					// color:white;
+					background: unset;
+					border: 1px solid #17233D;
+					color:#17233D;
+				}
+				.ant-table-row-expanded{
+					// border: 1px solid #f17063;
+					// background: #f17063;
+					// color:white;
+					background: unset;
+					border: 1px solid #17233D;
+					color:#17233D;
+				}
+				.ant-table-row-disabled{
+					opacity: .4;
+					cursor: not-allowed;
+				}
+			}
+		}
+	}
+}
+
+.tntx-table-expand-fixed-inner{
+	.ant-table-tbody{
+		tr{
+			p{
+				.overflowHidden();
+			}
+			td{
+				.fadeOut();
+			}
+		}
+	}
+	.ant-table-fixed-right{
+		z-index:2;
+		table{
+			background: unset;
+			td:last-child{
+				z-index:2;
+				position: absolute;
+			}
+		}
+	}
+}

@@ -1,0 +1,6 @@
+{
+    "extends": "tdued",
+    "globals": {
+        "dispatch": true
+    }
+}
